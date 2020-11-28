@@ -117,7 +117,8 @@ defmodule Cloudex.CloudinaryApi do
     [
       hackney: [
         basic_auth: {Cloudex.Settings.get(:api_key), Cloudex.Settings.get(:secret)}
-      ]
+      ],
+      ssl: [versions: [:"tlsv1.2"]]
     ]
   end
 
